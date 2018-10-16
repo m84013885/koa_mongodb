@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Fawn = require("fawn")
+// const Fawn = require("fawn")
 
 var dbUrl = `mongodb://127.0.0.1:27017/test`
 
@@ -16,6 +16,6 @@ mongoose
     .on('disconnected', function () {
         console.log('Mongoose connection disconnected')
     })
-Fawn.init(mongoose)
+// Fawn.init(mongoose)
 
 module.exports = mongoose
