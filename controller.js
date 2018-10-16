@@ -27,14 +27,14 @@ router.swagger({
 });
 
 (function () {
-  var files = fs.readdirSync('./controller')
+  var files = fs.readdirSync('./controllers')
   var js_files = files.filter((f) => {
     return f.endsWith('.js')
   })
 
   for (var f of js_files) {
     console.log(`process controller: ${f}...`)
-    let mapping = require('./controller/' + f)
+    let mapping = require('./controllers/' + f)
     console.log(mapping)
     router.map(mapping)
   }
