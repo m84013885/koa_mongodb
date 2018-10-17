@@ -1,4 +1,4 @@
-import {
+const {
     request,
     summary,
     body,
@@ -7,8 +7,7 @@ import {
     path,
     query,
     description
-} from '../swagger'
-
+} = require('../swagger')
 const model = require('../model')
 
 const tag = tags(['AppResource'])

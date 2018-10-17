@@ -1,9 +1,9 @@
-import _path from 'path';
-import _ from 'lodash';
-import validate from './validate';
-import { swaggerHTML } from './swaggerHTML';
-import init from './swaggerTemplate';
-import { apiObjects } from './index';
+const _ = require('lodash')
+const validate = require('./validate')
+const { swaggerHTML } = require('./swaggerHTML')
+const init = require('./swaggerTemplate')
+const { apiObjects } = require('./index')
+
 /**
  * allowed http methods
  */
@@ -115,7 +115,7 @@ const buildSwaggerJson = (options = {}, apiObjects) => {
  * add [ router.map ] and [ router.swagger ] for router object
  * @param {Object} router
  */
-export default (router) => {
+module.exports = (router) => {
   router.swagger = (options) => {
     const {
       swaggerJsonEndpoint = '/swagger-json',
@@ -170,4 +170,5 @@ export default (router) => {
 };
 
 
-export { convertPath, getPath };
+module.exports.convertPath = convertPath
+module.exports.getPath = getPath

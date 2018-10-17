@@ -1,6 +1,4 @@
-// import { wrapper } from ".";
-
-export default class ParameterWrapper {
+module.exports = class ParameterWrapper {
 
   static wrapper(parameters) {
     // ParameterWrapper.filter(parameters)

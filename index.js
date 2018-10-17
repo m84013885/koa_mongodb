@@ -1,4 +1,4 @@
-import router from './controller';
+const router = require('./controller')
 
 const Koa = require('koa')  // koa中间件
 const bodyParser = require('koa-bodyparser')    // 封装post

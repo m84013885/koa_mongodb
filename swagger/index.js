@@ -1,9 +1,10 @@
-import _ from 'lodash';
-import wrapper from './wrapper';
-import paramWrapper from './parameterWrapper'
+const _ = require('lodash')
+const wrapper = require('./wrapper')
+const paramWrapper = require('./parameterWrapper')
+
 
 /**
- * used for building swagger docs object
+ * used for building swagger docs objectobject
  */
 const apiObjects = {};
 
@@ -113,7 +114,7 @@ const Doc = {
   responses
 };
 
-export default Doc;
+module.exports = Doc
 
-export { request, summary, params, desc, description, query, path, body, tags,
-  wrapper, apiObjects, middlewares, formData, responses };
+// export { request, summary, params, desc, description, query, path, body, tags,
+//   wrapper, apiObjects, middlewares, formData, responses };

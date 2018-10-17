@@ -1,6 +1,6 @@
-import Router from 'koa-router'
-import fs from 'fs'
-import swagger from './swagger'
+const Router = require('koa-router')
+const fs = require('fs')
+const swagger = require('./swagger')
 
 const router = new Router();
 swagger.wrapper(router);
@@ -45,4 +45,4 @@ router.swagger({
 //   ctx.redirect("/index.html")
 // });
 
-export default router
+module.exports = router

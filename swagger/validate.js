@@ -15,7 +15,7 @@ class InputError extends Error {
  * @param {Object} input the input object, like request.query, request.body and so on.
  * @param {Object} expect the expect value, Ex: { name: { required: true, type: String }}
  */
-export default function (input, expect) {
+module.exports = function (input, expect) {
   Object.keys(expect).forEach((key) => {
     if (expect[key] === undefined) {
       delete input[key];

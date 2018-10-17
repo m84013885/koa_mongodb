@@ -6,7 +6,7 @@
  * @param {Object} options other options for swagger definition
  */
 
-export default (
+module.exports = (
   title = 'API DOC',
   description = 'API DOC',
   version = '1.0.0',
